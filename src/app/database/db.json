@@ -1,0 +1,27 @@
+{
+  "basket": [
+   
+  ],
+  "product": [
+    {
+      "id": "9eb633d1-cb0e-435e-a9cc-6ade5c1641e8",
+      "name": "product",
+      "price": 300
+    },
+    {
+      "id": "637d981a-4619-4923-bd0f-93f1722eb05a",
+      "name": "Product2",
+      "price": 400
+    },
+    {
+      "id": "90c4773e-56e5-46b3-8040-064d57c1b4ec",
+      "name": "Product3",
+      "price": 55
+    },
+    {
+      "id": "e28d468e-438d-4d54-9846-19f88f81f39f",
+      "name": "Product22",
+      "price": 21
+    }
+  ]
+}

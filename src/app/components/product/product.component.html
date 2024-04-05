@@ -1,0 +1,47 @@
+<div class="row" >
+    <div class="col">
+      <button class="btn btn-primary m-3" style="float: right; width: 20%;" data-bs-toggle="modal" data-bs-target="#addProductModal">Add Product</button>
+    </div>
+</div>
+<div class="row m-2">
+  @for (product of products; track $index) {
+  <div class="col-md-3">
+    <div class="card m-1">
+      <div class="card-body">
+        {{ product.name }} |
+        {{ product.price }} $
+      </div>
+      <div class="card-footer">
+        <div (click)="addCard(product)" class="btn btn-success" style="float: right;">Add Card</div>
+      </div>
+    </div>
+  </div>
+  }
+</div>
+
+<div class="modal" id="addProductModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Add Product</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form #productForm="ngForm" (ngSubmit)="add()">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" ngModel id="name" name="name" class="form-control" id="name">
+                </div>
+                <div class="mb-3">
+                  <label for="price" class="form-label">Price</label>
+                  <input type="number" id="price" name="price" ngModel class="form-control" id="exampleInputPassword1">
+                </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button #clsBtn type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button  (click)="add()" type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
