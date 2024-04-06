@@ -7,3 +7,7 @@ export const addBasket = createAction(
 export const updateBasket = createAction(
     "[Basket] Update Basket", props<{"basket":BasketModel}>()
     ) 
+export const setBasket = createAction(
+    "[Basket] Set Basket", props<{"baskets":BasketModel[]}>()
+    ) 
+

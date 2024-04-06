@@ -1,27 +1,62 @@
 {
   "basket": [
-   
+    {
+      "id": "51aa0888-32f7-4afb-92cd-7d4c1ed99bbb",
+      "product": {
+        "id": "9eb633d1-cb0e-435e-a9cc-6ade5c1641e8",
+        "name": "Product",
+        "price": 100
+      },
+      "count": 15
+    },
+    {
+      "id": "32b439ec-6950-4d0f-8fb5-3faa0f2f3234",
+      "product": {
+        "id": "637d981a-4619-4923-bd0f-93f1722eb05a",
+        "name": "Product2",
+        "price": 200
+      },
+      "count": 5
+    },
+    {
+      "id": "0f630af5-2c2d-484e-8cad-7e8d7748b236",
+      "product": {
+        "id": "90c4773e-56e5-46b3-8040-064d57c1b4ec",
+        "name": "Product3",
+        "price": 300
+      },
+      "count": 4
+    },
+    {
+      "id": "f433309e-813f-4681-b1b0-2f1ccf19f2d5",
+      "product": {
+        "id": "e28d468e-438d-4d54-9846-19f88f81f39f",
+        "name": "Product4",
+        "price": 400
+      },
+      "count": 3
+    }
   ],
   "product": [
     {
       "id": "9eb633d1-cb0e-435e-a9cc-6ade5c1641e8",
-      "name": "product",
-      "price": 300
+      "name": "Product",
+      "price": 100
     },
     {
       "id": "637d981a-4619-4923-bd0f-93f1722eb05a",
       "name": "Product2",
-      "price": 400
+      "price": 200
     },
     {
       "id": "90c4773e-56e5-46b3-8040-064d57c1b4ec",
       "name": "Product3",
-      "price": 55
+      "price": 300
     },
     {
       "id": "e28d468e-438d-4d54-9846-19f88f81f39f",
-      "name": "Product22",
-      "price": 21
+      "name": "Product4",
+      "price": 400
     }
   ]
 }

@@ -16,6 +16,7 @@ export class BasketService {
   getAll(callBack: (res: BasketModel[]) => void) {
     this._http.get(this.api).subscribe(res =>{
       callBack(res as BasketModel[]);
+      this.store.dispatch(BasketActions.setBasket({baskets: res as BasketModel[]}));
     });
   }
 

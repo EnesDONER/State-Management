@@ -20,5 +20,9 @@ export const BasketsReducer = createReducer(
             return item; 
         });
     }),
+    on(BasketActions.setBasket,(state,{baskets})=>{
+        state = baskets;
+        return state;
+    }),
 
 )

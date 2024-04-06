@@ -38,13 +38,12 @@ getAll(){
   });
 }
 getBasket(){
-  this.basketService.getAll(res=>{
-    this.baskets$ = res;
-  })
+  this.basketService.getAll(()=>{})
 }
 addCard(product:ProductModel){
 
   let currentbasket = this.baskets$.find(p => p.product.id === product.id);
+
   let basket:BasketModel;
 
   if(!currentbasket){
@@ -63,7 +62,6 @@ addCard(product:ProductModel){
     } 
     this.basketService.update(basket);
   }
-
 }
 
 add(){
