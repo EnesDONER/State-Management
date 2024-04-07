@@ -29,4 +29,8 @@ export class BasketService {
     const newApi = this.api+'/'+basket.id
     this._http.put(newApi,basket).subscribe(res=>this.store.dispatch(BasketActions.updateBasket({basket:basket})));
   }
+  remove(id:string){
+    const newApi = this.api+'/'+id
+    this._http.delete(newApi).subscribe(res=>this.store.dispatch(BasketActions.removeBasket({id:id})));
+  }
 }

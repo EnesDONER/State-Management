@@ -24,5 +24,8 @@ export const BasketsReducer = createReducer(
         state = baskets;
         return state;
     }),
-
+    on(BasketActions.removeBasket,(state,{id})=>{
+        const newState = state.filter(basket => basket.id !== id);
+        return newState;
+    }),
 )

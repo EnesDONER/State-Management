@@ -9,34 +9,38 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/">Product</a>
           </li>
-        
+          @if (baskets$.length>0) {
           <li class="nav-item dropdown ">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Basket  
-              @if (baskets$.length>0) {
-                <span class="badge text-bg-danger">{{baskets$.length}}</span>
-              }
-            
+              Basket    
+                <span class="badge text-bg-danger">    <i class="fa-solid fa-cart-shopping"></i> {{baskets$.length}}</span>
             </a>
+          
             <ul class="dropdown-menu" >
                 @for (basket of baskets$; track $index ) {
               <li>
                 <div class="m-2">
-                  {{basket.product.name}}
-                  <span class="badge text-bg-secondary">{{basket.count}}</span>
+                   {{basket.product.name}} <span class="text-primary">x {{basket.count}}</span> 
+                   <i (click)="remove(basket.id)" class="fa-regular fa-circle-xmark text-danger" style="float: right;"></i>
                 </div>
-              
                 <hr class="dropdown-divider">
             </li>
                  }
       
             </ul>
           </li>
-          
+        }
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+        <form  class="d-flex" >
+          <div class="me-2" style="position: relative;">
+            <input (keyup)="search()" [(ngModel)]="filter" name="filter" id="filter" class="form-control me-2" type="text" placeholder="Search" aria-label="Search">
+            @if (filter!="") {
+              <i (click)="clearSearch();" class="fa-solid fa-broom text-danger" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;" ></i>
+            }
+         
+          </div>
+          <button  (click)="search()" class="btn btn-outline-success me-1" type="submit">Search</button>
+         
         </form>
       </div>
     </div>
