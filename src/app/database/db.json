@@ -1,29 +1,11 @@
 {
   "basket": [
     {
-      "id": "06f9713c-1d5b-4331-a4a3-0e43d10e04d2",
-      "product": {
-        "id": "e28d468e-438d-4d54-9846-19f88f81f39f",
-        "name": "Product4",
-        "price": 400
-      },
-      "count": 3
-    },
-    {
       "id": "840645ed-4b79-4bfe-a7e7-0529c461cfa9",
       "product": {
         "id": "637d981a-4619-4923-bd0f-93f1722eb05a",
         "name": "Product2",
         "price": 200
-      },
-      "count": 2
-    },
-    {
-      "id": "2450e913-2ac9-4bf0-863c-b0e081973dfd",
-      "product": {
-        "id": "90c4773e-56e5-46b3-8040-064d57c1b4ec",
-        "name": "Product3",
-        "price": 300
       },
       "count": 3
     },
@@ -34,7 +16,7 @@
         "name": "Product",
         "price": 100
       },
-      "count": 2
+      "count": 3
     }
   ],
   "product": [

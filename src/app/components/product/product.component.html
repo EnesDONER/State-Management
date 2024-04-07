@@ -4,7 +4,7 @@
     </div>
 </div>
 <div class="row m-2">
-  @for (product of products; track $index) {
+  @for (product of products |  search:filter$  ; track $index  ) {
   <div class="col-md-3">
     <div class="card m-1">
       <div class="card-body">
@@ -19,8 +19,6 @@
   </div>
   }
 </div>
-
-{{filter$}}
 
 <div class="modal" id="addProductModal" tabindex="-1">
     <div class="modal-dialog">

@@ -9,10 +9,11 @@ import { v4 as uuidv4 } from 'uuid';
 import { Store } from '@ngrx/store';
 import { Stores } from '../../state/stores';
 import { Observable } from 'rxjs';
+import { SearchPipe } from '../../pipes/search.pipe';
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule,SearchPipe],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css',
 })
